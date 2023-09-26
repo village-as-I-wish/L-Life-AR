@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isGone
-import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.ar.core.Config
 import com.kosa.l_life_ar.databinding.ActivityArBinding
-import com.kosa.l_life_ar.databinding.ActivityMainBinding
 import io.github.sceneview.ar.ArSceneView
 import io.github.sceneview.ar.node.ArModelNode
 import io.github.sceneview.ar.node.PlacementMode
@@ -20,6 +19,9 @@ class ArActivity : AppCompatActivity() {
     private lateinit var sceneView: ArSceneView
     private lateinit var modelNode: ArModelNode
     private lateinit var normalView: View
+
+    private final var FRAGMENT1 = 1
+    private final var FRAGMENT2 = 2
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

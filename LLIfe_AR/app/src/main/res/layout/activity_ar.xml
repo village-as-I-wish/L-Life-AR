@@ -4,12 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ArActivity">
 
     <io.github.sceneview.ar.ArSceneView
         android:id="@+id/sceneView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/close"
+        style="@style/CustomButtonStyle">
+    </ImageButton>
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/bt_tab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/back"
+        android:text="증강현실"/>
+
+        <Button
+            android:id="@+id/capture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:drawablePadding="5dp"
+            android:text="back"
+            android:drawableStart="@drawable/capture"
+            android:backgroundTint="@color/tr_white">
+        </Button>
+
+    </LinearLayout>
+
 
     <View
         android:id="@+id/normalView"
@@ -17,31 +58,65 @@
         android:layout_height="match_parent">
     </View>
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/place"
-        android:layout_width="150dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:text="Place"
-        android:backgroundTint="@color/cardview_dark_background"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.863" />
+        android:gravity="center"
+        android:layout_marginBottom="30dp">
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/capture"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="Capture"
-        android:backgroundTint="@color/cardview_dark_background"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.863" />
+        <ImageButton
+            android:id="@+id/place"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:padding="7dp"
+            android:src="@drawable/fixbtntxt"
+            style="@style/CustomButtonStyle"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:textColor="@color/black">
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/furniture"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:padding="9dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/furniture_btn_txt"
+            style="@style/CustomButtonStyle"
+            android:textColor="@color/black">
+
+        </ImageButton>
+
+    </LinearLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/place"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:text="Place"-->
+<!--        android:backgroundTint="@color/cardview_dark_background"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.863" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/capture"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Capture"-->
+<!--        android:backgroundTint="@color/cardview_dark_background"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.863" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,6 +48,15 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    implementation("com.google.android.material:material:1.2.0-alpha05")
     // 3D and ARCore
     implementation("io.github.sceneview:arsceneview:0.10.0")
+
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    implementation ("me.relex:circleindicator:2.1.6")
+
+    implementation ("com.romandanylyk:pageindicatorview:1.0.3")
+
+
 }
